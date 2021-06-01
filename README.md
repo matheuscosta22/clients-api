@@ -1,6 +1,6 @@
 Rest API for clients registration and saving contacts:
-PHP 8.0.5
-Laravel Framework 8.42.1
+PHP 8.0.5,
+Laravel Framework 8.42.1,
 Database: MySql(phpMyAdmin)
 
 
