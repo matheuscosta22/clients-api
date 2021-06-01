@@ -1,0 +1,178 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "List of clients",
+        "description": "Api rest in laravel to register clients and save contacts",
+        "contact": {
+            "name": "Matheus Costa",
+            "url": "linkedin.com/in/matheus-costa-ba6090201/",
+            "email": "mcostadesantana2539@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api-clients/public/api/clients/add": {
+            "post": {
+                "tags": [
+                    "clients"
+                ],
+                "summary": "Create client",
+                "description": "creates and saves client contacts",
+                "operationId": "App\\Http\\Controllers\\Api\\ClientsController::add",
+                "requestBody": {
+                    "description": "Created client",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "example": "matheus"
+                                    },
+                                    "phone": {
+                                        "type": "string",
+                                        "example": "986547654"
+                                    },
+                                    "email": {
+                                        "type": "string",
+                                        "example": "email@exemp.com"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/api-clients/public/api/clients": {
+            "get": {
+                "tags": [
+                    "clients"
+                ],
+                "summary": "get list of clients and their contacts",
+                "description": "Returns list of clients",
+                "operationId": "",
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/api-clients/public/api/clients/{id}": {
+            "get": {
+                "tags": [
+                    "clients"
+                ],
+                "summary": "get client with this id",
+                "description": "get the customer with that id and their contacts",
+                "operationId": "",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "client id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "clients"
+                ],
+                "summary": "Update client",
+                "description": "update the client with the given id",
+                "operationId": "App\\Http\\Controllers\\Api\\ClientsController::update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "client id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Updated client",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "example": "matheus"
+                                    },
+                                    "phone": {
+                                        "type": "string",
+                                        "example": "986547654"
+                                    },
+                                    "email": {
+                                        "type": "string",
+                                        "example": "email@exemp.com"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "clients"
+                ],
+                "summary": "Delete user",
+                "description": "",
+                "operationId": "",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "The client with this id will be deleted",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}
