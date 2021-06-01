@@ -1,6 +1,8 @@
 Rest API for clients registration and saving contacts:
 PHP 8.0.5
 Laravel Framework 8.42.1
+Database: MySql(phpMyAdmin)
+
 
 Modify the .env file to store the data in the database (based on the template file that is already in the repository),
 also run the "composer install" to download the dependencies and "php artisan key: generate", to generate the encryption key.
