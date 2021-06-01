@@ -3,6 +3,9 @@ Modify the .env file to store the data in the database (based on the template fi
 Testing requests using Curl in cmd.
 Where id is written replace it with the id you want.
 
+Swagger documentation
+http://localhost/api-clients/public/api/documentation
+
 GET 
 curl "http://localhost/api-clients/public/api/clients",
 
@@ -17,3 +20,5 @@ curl -X PUT -H "Content-type: application/json" -d "{\"name\": \".......\", \"ph
 
 DELETE
 curl -X DELETE "http://localhost/api-clients/public/api/clients/{id}"
+
+<img src="image/swagger.png">
